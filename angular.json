@@ -46,6 +46,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
+              },
               "src/styles.css"
             ],
             "scripts": []
@@ -100,6 +103,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "kendo-dialog"
 }
