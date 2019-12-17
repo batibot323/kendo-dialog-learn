@@ -1,29 +1,26 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'my-app',
-    template: `
-      <div class="example-wrapper">
-        <button kendoButton *ngIf="!opened" (click)="open()">Open dialog</button>
-        <kendo-dialog title="Please confirm" *ngIf="opened" (close)="close('cancel')" [minWidth]="250" [width]="450">
-            <p style="margin: 30px; text-align: center;">Are you sure you want to continue?</p>
-            <kendo-dialog-actions>
-                <button kendoButton (click)="close('no')">No</button>
-                <button kendoButton (click)="close('yes')" primary="true">Yes</button>
-            </kendo-dialog-actions>
-        </kendo-dialog>
-      </div>
-    `
+  selector: 'my-app',
+  template: `
+    <div class="example-config">
+      <h4>Status: {{ status }}</h4>
+    </div>
+
+    <kendo-dialog title="Action required" (close)="onClose()">
+      <p style="margin: 30px; text-align: center;">Do you accept?</p>
+
+      <kendo-dialog-actions>
+        <button kendoButton (click)="onAccept()">Yes</button>
+        <button kendoButton (click)="onDecline()">No</button>
+      </kendo-dialog-actions>
+    </kendo-dialog>
+  `
 })
 export class AppComponent {
-    public opened = true;
+  public status = "open";
 
-    public close(status) {
-      console.log(`Dialog result: ${status}`);
-      this.opened = false;
-    }
-
-    public open() {
-      this.opened = true;
-    }
+  public onClose() { this.status = "closed"; }
+  public onAccept() { this.status = "accepted"; }
+  public onDecline() { this.status = "declined"; }
 }
