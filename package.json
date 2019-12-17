@@ -26,7 +26,8 @@
     "@progress/kendo-angular-l10n": "^2.0.0",
     "@progress/kendo-angular-buttons": "^5.0.0",
     "@progress/kendo-angular-common": "^1.0.0",
-    "@progress/kendo-theme-default": "latest"
+    "@progress/kendo-theme-default": "latest",
+    "@progress/kendo-angular-popup": "^3.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.20",

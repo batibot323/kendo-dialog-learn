@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { DialogsComponent } from './dialogs/dialogs.component';
 import { DialogsModule } from '@progress/kendo-angular-dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+
 
 
 
@@ -16,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     DialogsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
